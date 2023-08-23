@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="index.css"> <!-- Link to external CSS file -->
+
+</head>
+<body>
+  <div class="container"> <!-- Main container for the game -->
+
+    <h1 id="nameStatus">Tic Tac Toe</h1> <!-- Heading to display game status -->
+    <button id="restartBtn">Restart</button> <!-- Button to restart the game -->
+
+    <div id="tttboard"> <!-- Container for the Tic Tac Toe game board -->
+
+      <!-- Individual boxes for the Tic Tac Toe grid -->
+      <div class="box" id="0"></div>
+      <div class="box" id="1"></div>
+      <div class="box" id="2"></div>
+      <div class="box" id="3"></div>
+      <div class="box" id="4"></div>
+      <div class="box" id="5"></div>
+      <div class="box" id="6"></div>
+      <div class="box" id="7"></div>
+      <div class="box" id="8"></div>
+    </div>
+
+  </div>
+
+  <!-- Scripts to enhance functionality -->
+
+  <!-- Include Bootstrap's JavaScript bundle (assumes Bootstrap is installed) -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+  <!-- Include the custom JavaScript file for the game -->
+  <script src="index.js"></script>
+</body>
+</html>

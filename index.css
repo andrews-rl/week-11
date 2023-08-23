@@ -1,0 +1,96 @@
+/* Global reset for consistent styling across elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Define custom CSS variables (colors) using :root */
+:root {
+  --orange: #f26d21; /* Custom color for orange */
+  --winner: #60b347; /* Custom color for winner indicator */
+}
+
+/* Base styling for the entire body */
+body {
+  color: var(--orange); /* Set text color using custom color variable */
+  font-family: 'Bradley Hand', cursive; /* Use a cursive font */
+}
+
+/* Styling for main headings */
+h1 {
+  font-size: 40px; /* Set font size */
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+/* Styling for the main container of the game */
+.container {
+  padding: 40px; /* Add padding to the container */
+  height: 100vh; /* Set container height to full viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Arrange items in a column */
+  background-color: #636872; /* Set background color */
+}
+
+/* Styling for the Tic Tac Toe board */
+#tttboard {
+  width: 450px; /* Set width of the game board */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to new rows */
+  margin-top: 40px; /* Add margin on top of the game board */
+}
+
+/* Styling for individual boxes in the game board */
+.box {
+  width: 150px; /* Set width of each box */
+  height: 150px; /* Set height of each box */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow content to wrap within boxes */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  color: var(--orange); /* Set text color using custom color variable */
+
+  /* Box background and text styles */
+  background-color: var(--orange); /* Set background color using custom color variable */
+  color: white; /* Set text color to white */
+  font-size: 120px; /* Set font size for the box text */
+
+  /* Box borders and transition effects */
+  border-right: 2px solid white; /* Add right border to each box */
+  border-bottom: 2px solid white; /* Add bottom border to each box */
+  transition: all 0.3s ease-in-out; /* Apply smooth transition effect */
+}
+
+/* Remove right border from every third box */
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+/* Remove bottom border from every sixth box and onwards */
+.box:nth-child(6n) ~ .box {
+  border-bottom: none;
+}
+
+/* Styling for the restart button */
+button {
+  position: absolute; /* Position the button absolutely */
+  top: 3%; /* Set distance from the top */
+  left: 70%; /* Set distance from the left */
+  padding: 10px 20px; /* Add padding to the button */
+  border-radius: 10px; /* Add rounded corners */
+  font-family: 'Lato', sans-serif; /* Use the Lato font */
+  background-color: var(--orange); /* Set background color using custom color variable */
+  color: white; /* Set text color to white */
+  border-color: var (--orange); /* Set border color using custom color variable */
+  font-size: 18px; /* Set font size */
+  transition: 200ms transform; /* Apply transition effect */
+  font-weight: 600; /* Set font weight */
+}
+
+/* Styling when hovering over the button */
+button:hover {
+  cursor: pointer; /* Change cursor to pointer */
+  transform: translateY(-2px); /* Apply a slight upward translation */
+}
